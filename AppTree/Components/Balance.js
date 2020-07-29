@@ -128,7 +128,6 @@ export default class Balance extends Component {
     //adding address to the wallet
     onAddingAddress() {
         const hdkey = require("ethereumjs-wallet/hdkey");
-        // let memonic = "benefit essay bundle reason vanish amused always asset knee layer holiday elder inhale fall flat flame orient kick gun lumber quantum inform simple divert"
         const seed = bip39.mnemonicToSeed(this.state.seed);
         console.log(seed)
         const rootKey = hdkey.fromMasterSeed(seed);

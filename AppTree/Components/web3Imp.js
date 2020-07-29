@@ -94,13 +94,13 @@ db.transaction(function(tx){
 
 
 const hdkey = require("ethereumjs-wallet/hdkey");
-let memonic = "benefit essay bundle reason vanish amused always asset knee layer holiday elder inhale fall flat flame orient kick gun lumber quantum inform simple divert"
+let memonic = "type your mnemonic here"
 const seed = bip39.mnemonicToSeed(memonic);
 const rootKey = hdkey.fromMasterSeed(seed);
 const hardenedKey = rootKey.derivePath("m/44'/60'/0'/0");
 const Web3 = require('web3');
-//let testnet = 'http://node.crypteli.com:9998';
-let testnet = 'https://rinkeby.infura.io/'
+//let testnet = '';
+let testnet = 'testnet url'
 
 const childKey = hardenedKey.deriveChild(pu);
 const wallet = childKey.getWallet();
